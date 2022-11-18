@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:59:02 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:12:33 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/18 15:18:27 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	putnbr(int num)
 	}
 	if (num < 10)
 	{
-		putchar((num + 48));
+		putchar(num + 48);
 		return ;
 	}
-	putnbr((num / 10));
+	putnbr(num / 10);
 	putchar(num % 10 + 48);
 }
