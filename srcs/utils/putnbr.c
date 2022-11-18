@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_c.c                                             :+:      :+:    :+:   */
+/*   putnbr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 09:51:40 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 14:52:53 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/18 14:59:02 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/18 15:01:39 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../ft_printf.h"
+#include"../../ft_printf.h"
 
-void	ft_c(va_list av, unsigned long long *total_len)
+void	putnbr(int n)
 {
-	char	c;
-
-	c = va_arg(av, char);
-	write(1, &c, 1);
-	*total_len += 1;
+	if (n > 2147483647)
+		return ;
+	if (n == -2147483648)
+	{
+		putchar('-');
+		putchar('2');
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		putchar('-');
+		n = n * -1;
+	}
+	if (n < 10)
+	{
+		putchar((n + 48));
+		return ;
+	}
+	putnbr((n / 10));
+	putchar(n % 10 + 48);
 }

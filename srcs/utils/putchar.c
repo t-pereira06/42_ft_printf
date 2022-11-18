@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_c.c                                             :+:      :+:    :+:   */
+/*   putchar.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 09:51:40 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 14:52:53 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/18 14:58:17 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/18 15:02:17 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../ft_printf.h"
+#include"../../ft_printf.h"
 
-void	ft_c(va_list av, unsigned long long *total_len)
+void	ft_putchar(char a)
 {
-	char	c;
-
-	c = va_arg(av, char);
-	write(1, &c, 1);
-	*total_len += 1;
+	write(1, &a, 1);
 }
