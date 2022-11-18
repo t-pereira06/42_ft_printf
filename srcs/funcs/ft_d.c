@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../ft_printf.h"
-#include "../../libft/libft.h"
+#include "../ft_printf.h"
+#include "../libft/libft.h"
 
 void	ft_d(va_list av, unsigned long long *total_len)
 {
