@@ -6,32 +6,32 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:59:02 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:01:39 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/18 15:12:33 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../../ft_printf.h"
 
-void	putnbr(int n)
+void	putnbr(int num)
 {
-	if (n > 2147483647)
+	if (num > 2147483647)
 		return ;
-	if (n == -2147483648)
+	if (num == -2147483648)
 	{
 		putchar('-');
 		putchar('2');
-		n = 147483648;
+		num = 147483648;
 	}
-	if (n < 0)
+	if (num < 0)
 	{
 		putchar('-');
-		n = n * -1;
+		num = num * -1;
 	}
-	if (n < 10)
+	if (num < 10)
 	{
-		putchar((n + 48));
+		putchar((num + 48));
 		return ;
 	}
-	putnbr((n / 10));
-	putchar(n % 10 + 48);
+	putnbr((num / 10));
+	putchar(num % 10 + 48);
 }
