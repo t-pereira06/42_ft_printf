@@ -23,6 +23,7 @@ unsigned long long	ft_length_num(unsigned long long num)
 		len++;
 	while (num > 0)
 	{
+
 		num /= 10;
 		len++;
 	}

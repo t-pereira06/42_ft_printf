@@ -13,7 +13,7 @@
 #include "../ft_printf.h"
 #include "../libft/libft.h"
 
-void	putnbr_unsigned(unsigned int num)
+void	ft_putnbr_unsigned_int(unsigned int num)
 {
 	if (num > 4294967295)
 		return ;

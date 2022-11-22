@@ -15,24 +15,11 @@
 
 void	ft_d(va_list av, unsigned long long *total_len)
 {
-	unsigned int		num;
+	unsigned long long	num;
 	unsigned long long	num_len;
 
-	num = va_arg(av, unsigned int);
-	putnbr_unsigned(num);
-	num_len = length_num(num);
+	num = va_arg(av, unsigned long long);
+	ft_putnbr_unsigned_int(num);
+	num_len = ft_length_num(num);
 	*total_len += num_len;
-}
-
-void	ft_putnbr_unsigned_int(unsigned int n)
-{
-	if (n > 4294967295)
-		return ;
-	if (n < 10)
-	{
-		ft_putchar(n + 48);
-		return ;
-	}
-	ft_putnbr_unsigned_int(n / 10);
-	ft_putchar(n % 10 + 48);
 }

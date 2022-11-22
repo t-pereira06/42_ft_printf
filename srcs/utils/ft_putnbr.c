@@ -13,7 +13,7 @@
 #include"../ft_printf.h"
 #include "../libft/libft.h"
 
-void	putnbr(int num)
+void	ft_putnbr(int num)
 {
 	if (num > 2147483647)
 		return ;
