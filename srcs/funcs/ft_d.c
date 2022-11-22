@@ -19,8 +19,8 @@ void	ft_d(va_list av, unsigned long long *total_len)
 	unsigned long long	num_len;
 
 	num = va_arg(av, unsigned int);
-	ft_putnbr_unsigned_int(num);
-	num_len = ft_num_len(num);
+	putnbr_unsigned(num);
+	num_len = length_num(num);
 	*total_len += num_len;
 }
 

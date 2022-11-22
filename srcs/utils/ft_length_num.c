@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putstr.c                                           :+:      :+:    :+:   */
+/*   length_num.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:59:41 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/18 14:54:12 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/18 14:57:04 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include "../libft/libft.h"
 
-void	putstr(char *str)
+unsigned long long	ft_length_num(unsigned long long num)
 {
-	int	i;
+	unsigned long long	len;
 
-	i = 0;
-	while (str[i])
+	len = 0;
+	if (num < 0)
+		num *= -1;
+		len++;
+	while (num > 0)
 	{
-		putchar(str[i]);
-		i++;
+		num /= 10;
+		len++;
 	}
+	return (len);
 }

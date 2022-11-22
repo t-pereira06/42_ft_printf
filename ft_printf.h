@@ -16,4 +16,20 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+void	ft_c(va_list av, unsigned long long *total_len);
+void	ft_s(va_list av, unsigned long long *total_len);
+void	ft_p(va_list av, unsigned long long *total_len);
+void	ft_d(va_list av, unsigned long long *total_len);
+void	ft_i(va_list av, unsigned long long *total_len);
+void	ft_u(va_list av, unsigned long long *total_len);
+void	ft_x(va_list av, unsigned long long *total_len);
+void	ft_X(va_list av, unsigned long long *total_len);
+void	ft_percent(unsigned long long *total_len);
+unsigned long long	length_num(unsigned long long num);
+unsigned long long	ft_put_ptr(unsigned long long ptr);
+void	ft_putchar(char a);
+void	putnbr_unsigned(unsigned int num);
+void	putnbr(int num);
+void	putstr(char *str);
+
 #endif

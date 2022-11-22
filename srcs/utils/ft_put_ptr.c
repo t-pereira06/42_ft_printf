@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include "../libft/libft.h"
 
-unsigned long long	ptr_length(unsigned long long num)
+int	ptr_length(uintptr_t num)
 {
 	unsigned long long	len;
 
@@ -25,7 +26,7 @@ unsigned long long	ptr_length(unsigned long long num)
 	return (len);
 }
 
-void	ft_print_ptr(unsigned long long num)
+void	ft_print_ptr(uintptr_t num)
 {
 	if (num >= 16)
 	{
@@ -46,13 +47,17 @@ unsigned long long	ft_put_ptr(unsigned long long ptr)
 	unsigned long long	printed_len;
 
 	printed_len = 0;
-	printed_len += write(1, "0x", 2);
+	ft_putstr_fd("0x", 1);
+	printed_len += 2;
 	if (ptr == 0)
-		printed_len += write(1, "0", 1);
+	{
+		ft_putchar_fd('0', 1);
+		printed_len += 1;
+	}
 	else
 	{
-		ft_put_ptr(ptr);
-		printed_len += ft_ptr_len(ptr);
+		ft_print_ptr(ptr);
+		printed_len += ptr_length(ptr);
 	}
 	return (printed_len);
 }

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putchar.c                                          :+:      :+:    :+:   */
+/*   putstr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 14:58:17 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:53:05 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/18 15:59:41 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+#include "../libft/libft.h"
 
-void	ft_putchar(char a)
+void	putstr(char *str)
 {
-	write(1, &a, 1);
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		putchar(str[i]);
+		i++;
+	}
 }
