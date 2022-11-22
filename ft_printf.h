@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:51:19 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:54:44 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/22 15:45:44 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int		ft_printf(const char *str, ...);
 void	ft_c(va_list av, unsigned long long *total_len);

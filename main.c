@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/22 14:49:39 by marvin           ###   ########.fr       */
+/*   Updated: 2022/11/22 15:46:30 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		main(void)
 {
 	char	a;
-	char	str;
+	char	*str;
 	int		i;
 	unsigned int	b;
 	unsigned int	hex;
@@ -27,8 +27,8 @@ int		main(void)
 	hex = 45632123;
 
 	// %c
-	printf("printf Char:\n", a);
-	printf("ft_printf Char:");
+	printf("printf: %c\n", a);
+	printf("ft_printf:");
 	ft_printf("%c", a);
 
 }
