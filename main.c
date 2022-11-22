@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/22 15:46:30 by marvin           ###   ########.fr       */
+/*   Updated: 2022/11/22 15:53:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		main(void)
 	printf("printf: %c\n", a);
 	printf("ft_printf:");
 	ft_printf("%c", a);
+	// %s
 
 }
