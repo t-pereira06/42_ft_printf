@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr_unsigned.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned_int.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:15:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:55:46 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:06:57 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include "../libft/libft.h"
+#include "../../libft/libft.h"
 
 void	ft_putnbr_unsigned_int(unsigned int num)
 {
@@ -19,9 +19,9 @@ void	ft_putnbr_unsigned_int(unsigned int num)
 		return ;
 	if (num < 10)
 	{
-		putchar(num + 48);
+		ft_putchar(num + 48);
 		return ;
 	}
-	putnbr_unsigned(num / 10);
-	putchar(num % 10 + 48);
+	ft_putnbr_unsigned_int(num / 10);
+	ft_putchar(num % 10 + 48);
 }

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putnbr.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:59:02 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/18 15:18:27 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:06:40 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"../ft_printf.h"
-#include "../libft/libft.h"
+#include "../ft_printf.h"
+#include "../../libft/libft.h"
 
 void	ft_putnbr(int num)
 {
@@ -19,20 +19,20 @@ void	ft_putnbr(int num)
 		return ;
 	if (num == -2147483648)
 	{
-		putchar('-');
-		putchar('2');
+		ft_putchar('-');
+		ft_putchar('2');
 		num = 147483648;
 	}
 	if (num < 0)
 	{
-		putchar('-');
+		ft_putchar('-');
 		num = num * -1;
 	}
 	if (num < 10)
 	{
-		putchar(num + 48);
+		ft_putchar(num + 48);
 		return ;
 	}
-	putnbr(num / 10);
-	putchar(num % 10 + 48);
+	ft_putnbr(num / 10);
+	ft_putchar(num % 10 + 48);
 }

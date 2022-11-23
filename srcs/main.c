@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 09:44:24 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 12:14:04 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ int		main(void)
 	hex = 45632123;
 
 	// %c
+	write(1, "ft_c\n", 5);
 	printf("printf: %c\n", a);
-	printf("ft_printf:");
+	write(1, "ft_printf: ", 12);
 	ft_printf("%c", a);
-	printf("\n");
+	printf("\n\n");
 	// %s
+	write(1, "ft_s\n", 5);
 	printf("printf: %s\n", str);
-	printf("ft_printf:");
+	write(1, "ft_printf: ", 12);
 	ft_printf("%s", str);
 	printf("\n");
 }

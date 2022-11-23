@@ -1,0 +1,1 @@
+cc main.c ft_printf.c funcs/*.c utils/*.c ../libft/*.c
