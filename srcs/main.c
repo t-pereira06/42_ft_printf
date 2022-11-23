@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 15:24:42 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:48:08 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int		main(void)
 	char	a;
 	char	*str;
 	char	*str2;
+	char	percent;
 	int		i;
 	unsigned int	b;
 	unsigned int	hex;
@@ -27,6 +28,7 @@ int		main(void)
 	i = 42;
 	b = 4294967295;
 	hex = 45632123;
+	percent = '%';
 
 	// %c
 	write(1, "ft_c\n", 5);
@@ -44,9 +46,9 @@ int		main(void)
 
 	// %p
 	write(1, "ft_p\n", 5);
-	printf("printf: %p\n", &str);
+	printf("printf: %p\n", &str2);
 	write(1, "ft_printf: ", 12);
-	ft_printf("%p", &str);
+	ft_printf("%p", &str2);
 	printf("\n\n");
 
 	// %d
@@ -83,4 +85,11 @@ int		main(void)
 	write(1, "ft_printf: ", 12);
 	ft_printf("%X", hex);
 	printf("\n\n");
+
+	// %%
+	write(1, "ft_percent\n", 12);
+	printf("printf: %%\n", percent);
+	/*write(1, "ft_printf: ", 12);
+	ft_printf("%X", hex);
+	printf("\n\n");*/
 }
