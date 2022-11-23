@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d.c                                             :+:      :+:    :+:   */
+/*   ft_hexlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 10:47:41 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 13:57:42 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/23 13:51:41 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/23 14:25:28 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 #include "../../libft/libft.h"
 
-void	ft_d(va_list av, unsigned long long *total_len)
+int	ft_hexlen(unsigned	int num)
 {
-	unsigned long long	num;
-	unsigned long long	num_len;
+	int	len;
 
-	num = va_arg(av, unsigned long long);
-	ft_putnbr(num);
-	num_len = ft_length_num(num);
-	*total_len += num_len;
+	len = 0;
+	while (num != 0)
+	{
+		len++;
+		num = num / 16;
+	}
+	return (len);
 }

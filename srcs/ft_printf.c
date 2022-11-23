@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:48:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 11:57:41 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:02:17 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@ void	type(char str, va_list av, unsigned long long *total_len)
 		ft_s(av, total_len);
 	else if (str == 'p')
 		ft_p(av, total_len, 'p');
-	/*else if (str == 'd' || str == 'i')
+	else if (str == 'd' || str == 'i')
 		ft_d(av, total_len);
 	else if (str == 'u')
-		ft_putnbr_base(va_arg(av, unsigned int), "0123456789", total_len);
+		ft_u(av, total_len);
 	else if (str == 'x')
-		ft_putnbr_base(va_arg(av, unsigned int), "0123456789abcdef", total_len);
+		ft_x_X(av, total_len, 'x');
 	else if (str == 'X')
-		ft_putnbr_base(va_arg(av, unsigned int), "0123456789ABCDEF", total_len);
-	else if (str == '%')
+		ft_x_X(av, total_len, 'X');
+	/*else if (str == '%')
 		ft_putchar('%', total_len);*/
 }
 
