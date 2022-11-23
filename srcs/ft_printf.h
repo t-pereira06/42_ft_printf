@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:51:19 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 15:09:53 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:55:31 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	ft_d(va_list av, unsigned long long *total_len);
 void	ft_i(va_list av, unsigned long long *total_len);
 void	ft_u(va_list av, unsigned long long *total_len);
 void	ft_x_X(va_list av, unsigned long long *total_len, int type);
-//void	ft_percent(unsigned long long *total_len);
+void	ft_percent(unsigned long long *total_len);
 
 #endif

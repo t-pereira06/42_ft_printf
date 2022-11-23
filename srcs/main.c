@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 15:48:08 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:58:51 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ int		main(void)
 
 	// %%
 	write(1, "ft_percent\n", 12);
-	printf("printf: %%\n", percent);
-	/*write(1, "ft_printf: ", 12);
-	ft_printf("%X", hex);
-	printf("\n\n");*/
+	printf("printf: %%\n");
+	write(1, "ft_printf: ", 12);
+	ft_printf("%%");
+	printf("\n\n");
 }

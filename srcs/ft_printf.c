@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:48:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 14:33:37 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:55:25 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	type(char str, va_list av, unsigned long long *total_len)
 		ft_x_X(av, total_len, 'x');
 	else if (str == 'X')
 		ft_x_X(av, total_len, 'X');
-	/*else if (str == '%')
-		ft_putchar('%', total_len);*/
+	else if (str == '%')
+		ft_percent(total_len);
 }
 
 int	type_check(int c)
