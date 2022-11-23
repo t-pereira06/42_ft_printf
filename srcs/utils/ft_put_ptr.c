@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:56:48 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 11:59:17 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:48:00 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	ft_print_ptr(uintptr_t num)
 {
 	if (num >= 16)
 	{
-		ft_put_ptr(num / 16);
-		ft_put_ptr(num % 16);
+		ft_print_ptr(num / 16);
+		ft_print_ptr(num % 16);
 	}
 	else
 	{
@@ -42,16 +42,16 @@ void	ft_print_ptr(uintptr_t num)
 	}
 }
 
-unsigned long long	ft_put_ptr(unsigned long long ptr)
+void	ft_put_ptr(unsigned long long ptr)
 {
-	unsigned long long	printed_len;
+	static unsigned long long	printed_len;
 
 	printed_len = 0;
-	ft_putstr_fd("0x", 1);
+	ft_putstr("0x");
 	printed_len += 2;
 	if (ptr == 0)
 	{
-		ft_putchar_fd('0', 1);
+		ft_putchar('0');
 		printed_len += 1;
 	}
 	else
@@ -59,5 +59,4 @@ unsigned long long	ft_put_ptr(unsigned long long ptr)
 		ft_print_ptr(ptr);
 		printed_len += ptr_length(ptr);
 	}
-	return (printed_len);
 }

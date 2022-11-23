@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:48:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 14:02:17 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:33:37 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	type(char str, va_list av, unsigned long long *total_len)
 	else if (str == 's')
 		ft_s(av, total_len);
 	else if (str == 'p')
-		ft_p(av, total_len, 'p');
+		ft_p(av, total_len);
 	else if (str == 'd' || str == 'i')
 		ft_d(av, total_len);
 	else if (str == 'u')

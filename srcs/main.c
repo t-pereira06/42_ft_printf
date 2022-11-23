@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 14:03:47 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:30:28 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ int		main(void)
 	write(1, "ft_printf: ", 12);
 	ft_printf("%s", str);
 	printf("\n\n");
-	/*
+
 	// %p
-	write(1, "ft_s\n", 5);
-	printf("printf: %s\n", str);
+	write(1, "ft_p\n", 5);
+	printf("printf: %p\n", str);
 	write(1, "ft_printf: ", 12);
-	ft_printf("%s", str);
-	printf("\n");*/
+	ft_printf("%p", str);
+	printf("\n\n");
 
 	// %d
 	write(1, "ft_d\n", 5);

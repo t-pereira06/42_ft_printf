@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 12:00:16 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 14:47:56 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putstr(char *str)
 	i = 0;
 	while (str[i])
 	{
-		putchar(str[i]);
+		ft_putchar(str[i]);
 		i++;
 	}
 }
