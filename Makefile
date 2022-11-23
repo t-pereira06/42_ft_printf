@@ -6,30 +6,28 @@
 #    By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 14:26:29 by tsodre-p          #+#    #+#              #
-#    Updated: 2022/11/23 10:50:25 by tsodre-p         ###   ########.fr        #
+#    Updated: 2022/11/23 16:05:39 by tsodre-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-LIBFT = libft/libft.h
-SRC_DIR = stcs/ft_printf.h
+NAME = libftprintf.a
 
 CC = cc
 RM = rm -f
 CFLAG = -Wall -Wextra -Werror
 AR = ar rcs
 
-SRC = $(shell find . -type f -name '*.c')
+FILES = $(shell find . -type f -name '*.c')
 
-OBJ = $(FUNCS:%.c=%.o)
-OBJ_FINAL = $(shell find . -type f -name '*.o')
+OBJ = $(FILES:%.c=%.o)
+FILES_O = $(shell find . -type f -name '*.o')
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@$(AR) $(NAME) $(OBJ_FINAL)
+		@$(AR) $(NAME) $(FILES_O)
 clean:
-		@$(RM) $(OBJ_FINAL)
+		@$(RM) $(FILES_O)
 
 fclean: clean
 		@$(RM) $(NAME)
