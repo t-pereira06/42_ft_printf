@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 14:30:28 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:24:42 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ int		main(void)
 {
 	char	a;
 	char	*str;
+	char	*str2;
 	int		i;
 	unsigned int	b;
 	unsigned int	hex;
 
 	a = 'a';
 	str = "string dos deuses";
+	str2 = 0;
 	i = 42;
 	b = 4294967295;
 	hex = 45632123;
@@ -42,9 +44,9 @@ int		main(void)
 
 	// %p
 	write(1, "ft_p\n", 5);
-	printf("printf: %p\n", str);
+	printf("printf: %p\n", &str);
 	write(1, "ft_printf: ", 12);
-	ft_printf("%p", str);
+	ft_printf("%p", &str);
 	printf("\n\n");
 
 	// %d

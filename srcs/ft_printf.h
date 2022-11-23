@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:51:19 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 14:46:46 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:09:53 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdint.h>
 
 unsigned long long	ft_length_num(unsigned long long num);
-void	ft_put_ptr(unsigned long long ptr);
+unsigned long long	ft_put_ptr(unsigned long long ptr);
 void	ft_putchar(char a);
 void	ft_putnbr_unsigned_int(unsigned int num);
 void	ft_putnbr(int num);

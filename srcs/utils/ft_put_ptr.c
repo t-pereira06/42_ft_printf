@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:56:48 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 14:48:00 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/23 15:21:26 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,21 +42,22 @@ void	ft_print_ptr(uintptr_t num)
 	}
 }
 
-void	ft_put_ptr(unsigned long long ptr)
+unsigned long long	ft_put_ptr(unsigned long long ptr)
 {
-	static unsigned long long	printed_len;
+	unsigned long long	printed_len;
 
 	printed_len = 0;
-	ft_putstr("0x");
-	printed_len += 2;
 	if (ptr == 0)
 	{
-		ft_putchar('0');
-		printed_len += 1;
+		write(1, "(nil)", 5);
+		printed_len += 5;
 	}
 	else
 	{
+		ft_putstr("0x");
+		printed_len += 2;
 		ft_print_ptr(ptr);
 		printed_len += ptr_length(ptr);
 	}
+	return (printed_len);
 }
