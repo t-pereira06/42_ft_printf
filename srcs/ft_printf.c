@@ -6,31 +6,35 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:48:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 15:55:25 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:22:30 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "../libft/libft.h"
 
-void	type(char str, va_list av, unsigned long long *total_len)
+int	type(char str, va_list av)
 {
+	int		full_len;
+
+	full_len = 0;
 	if (str == 'c')
-		ft_c(av, total_len);
+		full_len += ft_putchar(va_arg(av, int));
 	else if (str == 's')
-		ft_s(av, total_len);
+		full_len += ft_putstr(va_arg(av, char *));
 	else if (str == 'p')
-		ft_p(av, total_len);
+		full_len += ft_put_ptr(va_arg(av, unsigned long long));
 	else if (str == 'd' || str == 'i')
-		ft_d(av, total_len);
+		full_len += ft_putnbr(va_arg(av, int));
 	else if (str == 'u')
-		ft_u(av, total_len);
+		full_len += ft_putnbr_unsigned(va_arg(av, unsigned int));
 	else if (str == 'x')
-		ft_x_X(av, total_len, 'x');
+		full_len += ft_puthex(va_arg(av, unsigned int), str);
 	else if (str == 'X')
-		ft_x_X(av, total_len, 'X');
+		full_len += ft_puthex(va_arg(av, unsigned int), str);
 	else if (str == '%')
-		ft_percent(total_len);
+		full_len += write(1, "%", 1);
+	return(full_len);
 }
 
 int	type_check(int c)
@@ -42,24 +46,24 @@ int	type_check(int c)
 int		ft_printf(const char *str, ...)
 {
 	va_list	av;
-	unsigned long long		total_len;
+	int		total_len;
 	size_t	i;
 
 	if (!str)
 		return (-1);
 	va_start(av, str);
 	i = 0;
+	total_len = 0;
 	while (str[i])
 	{
 		if (str[i] != '%' )
-			return (0);
-			//put_common_char(str[i], &total_len);
+			total_len += write(1, &str[i], 1);
 		else if (str[i] == '%' && !type_check(str[i + 1]))
-			write(1, "%", 1);
+			total_len += write(1, "%", 1);
 		else if (str[i] == '%' && type_check(str[i + 1]))
 		{
 			i++;
-			type(str[i], av, &total_len);
+			total_len += type(str[i], av);
 		}
 		i++;
 	}

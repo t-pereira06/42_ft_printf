@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 14:49:39 by marvin            #+#    #+#             */
-/*   Updated: 2022/11/23 17:13:19 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/24 09:20:12 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/24 12:22:10 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "../libft/libft.h"
 
 int		main(void)
 {
@@ -25,9 +26,9 @@ int		main(void)
 	a = 'a';
 	str = "string dos deuses";
 	str2 = 0;
-	i = 42;
-	b = 4294967295;
-	hex = 45632123;
+	i = -42174612;
+	b = -42174612;
+	hex = -42174612;
 	percent = '%';
 
 	// %c

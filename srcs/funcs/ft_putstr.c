@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d.c                                             :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/18 10:47:41 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/23 13:57:42 by tsodre-p         ###   ########.fr       */
+/*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
+/*   Updated: 2022/11/24 14:08:54 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 #include "../../libft/libft.h"
 
-void	ft_d(va_list av, unsigned long long *total_len)
+int	ft_putstr(char *str)
 {
-	unsigned long long	num;
-	unsigned long long	num_len;
+	int	i;
 
-	num = va_arg(av, unsigned long long);
-	ft_putnbr(num);
-	num_len = ft_length_num(num);
-	*total_len += num_len;
+	i = 0;
+	if (!str)
+		i += write(1, "(null)", 6);
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (i);
 }
