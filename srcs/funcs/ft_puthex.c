@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:49:09 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:01:53 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:46:58 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,18 @@ int	ft_hexlen(unsigned	int num)
 	len = 0;
 	while (num != 0)
 	{
-		len++;
 		num = num / 16;
+		len++;
 	}
 	return (len);
 }
 
-int	ft_puthex(unsigned int num, const char format)
+void	ft_printhex(unsigned int num, const char format)
 {
-	if (num == 0)
-		write(1, "0", 1);
 	if (num >= 16)
 	{
-		ft_puthex(num / 16, format);
-		ft_puthex(num % 16, format);
+		ft_printhex(num / 16, format);
+		ft_printhex(num % 16, format);
 	}
 	else
 	{
@@ -47,5 +45,12 @@ int	ft_puthex(unsigned int num, const char format)
 				ft_putchar((num - 10 + 'A'));
 		}
 	}
+}
+
+int	ft_puthex(unsigned int num, const char type)
+{
+	if (num == 0)
+		return (write(1, "0", 1));
+	ft_printhex(num, type);
 	return(ft_hexlen(num));
 }
