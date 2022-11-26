@@ -1,2 +1,2 @@
-# grade for get_next_line project
+# grade for printf project
 The architecture of your operating system and its kernel version.
