@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:48:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:22:30 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/28 09:25:06 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,33 @@ int	type(char str, va_list av)
 		full_len += ft_puthex(va_arg(av, unsigned int), str);
 	else if (str == '%')
 		full_len += write(1, "%", 1);
-	return(full_len);
+	return (full_len);
 }
 
 int	type_check(int c)
 {
-	return ((c == 'c') || (c == 's') || (c == 'p') || (c == 'd')
-		|| (c == 'i') || (c == 'u') || (c == 'x') || (c == 'X') || (c == '%'));
+	if (c == 'c')
+		return (1);
+	else if (c == 's')
+		return (1);
+	else if (c == 'p')
+		return (1);
+	else if (c == 'd')
+		return (1);
+	else if (c == 'i')
+		return (1);
+	else if (c == 'u')
+		return (1);
+	else if (c == 'x')
+		return (1);
+	else if (c == 'X')
+		return (1);
+	else if (c == '%')
+		return (1);
+	return (0);
 }
 
-int		ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
 	va_list	av;
 	int		total_len;

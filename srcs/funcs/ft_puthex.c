@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:49:09 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:46:58 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/28 09:25:49 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,5 @@ int	ft_puthex(unsigned int num, const char type)
 	if (num == 0)
 		return (write(1, "0", 1));
 	ft_printhex(num, type);
-	return(ft_hexlen(num));
+	return (ft_hexlen(num));
 }

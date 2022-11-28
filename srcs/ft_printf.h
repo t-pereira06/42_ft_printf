@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 11:51:19 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:22:26 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/28 09:24:30 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 # include <stdio.h>
 # include <stdint.h>
 
-unsigned long long 	ft_put_ptr(unsigned long long  ptr);
-int		ft_putchar(char a);
-int		ft_putnbr_unsigned(unsigned int num);
-int		ft_putnbr(int num);
-int		ft_putstr(char *str);
-int		ft_printf(const char *str, ...);
-int		ft_puthex(unsigned int num, const char format);
-char	*ft_itoa_unsigned(unsigned int n);
+unsigned long long	ft_put_ptr(unsigned long long ptr);
+int					ft_putchar(char a);
+int					ft_putnbr_unsigned(unsigned int num);
+int					ft_putnbr(int num);
+int					ft_putstr(char *str);
+int					ft_printf(const char *str, ...);
+int					ft_puthex(unsigned int num, const char format);
+char				*ft_itoa_unsigned(unsigned int n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:15:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:19:43 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/28 09:25:30 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,6 @@
 
 int	ft_putnbr_unsigned(unsigned int num)
 {
-	/*if (num > 4294967295)
-		return (0);
-	if (num < 10)
-	{
-		ft_putchar(num + 48);
-		return (0);
-	}
-	ft_putnbr_unsigned(num / 10);
-	ft_putchar(num % 10 + 48);*/
-
 	char	*str;
 	int		len;
 

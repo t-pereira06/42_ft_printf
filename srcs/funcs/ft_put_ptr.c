@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:56:48 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:03:40 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/28 09:26:35 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ptr_length(uintptr_t num)
 {
-	unsigned long long 	len;
+	unsigned long long	len;
 
 	len = 0;
 	while (num != 0)
@@ -42,9 +42,9 @@ void	ft_print_ptr(uintptr_t num)
 	}
 }
 
-unsigned long long 	ft_put_ptr(unsigned long long  ptr)
+unsigned long long	ft_put_ptr(unsigned long long ptr)
 {
-	int 	printed_len;
+	int	printed_len;
 
 	printed_len = 0;
 	if (ptr == 0)
