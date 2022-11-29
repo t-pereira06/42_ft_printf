@@ -6,12 +6,11 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 09:55:09 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:01:45 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include "../../libft/libft.h"
 
 int	ft_putstr(char *str)
 {

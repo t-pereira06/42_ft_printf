@@ -6,12 +6,11 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:56:48 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/28 09:26:35 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:01:25 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-#include "../../libft/libft.h"
 
 int	ptr_length(uintptr_t num)
 {
