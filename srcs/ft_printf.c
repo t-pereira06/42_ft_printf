@@ -77,7 +77,7 @@ int	ft_printf(const char *str, ...)
 			total_len += write(1, &str[i], 1);
 		else if (str[i] == '%' && !type_check(str[i + 1]))
 			total_len += write(1, "%", 1);
-		else if (str[i] == '%' && type_check(str[i + 1]))
+		else if (str[i] == '%')
 		{
 			i++;
 			total_len += type(str[i], av);
