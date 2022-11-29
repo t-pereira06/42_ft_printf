@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_ptr.c                                       :+:      :+:    :+:   */
+/*   ft_put_pointer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:56:48 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 11:01:25 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 11:13:11 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ptr_length(uintptr_t num)
+int	pointer_length(uintptr_t num)
 {
 	unsigned long long	len;
 
@@ -25,12 +25,12 @@ int	ptr_length(uintptr_t num)
 	return (len);
 }
 
-void	ft_print_ptr(uintptr_t num)
+void	ft_print_pointer(uintptr_t num)
 {
 	if (num >= 16)
 	{
-		ft_print_ptr(num / 16);
-		ft_print_ptr(num % 16);
+		ft_print_pointer(num / 16);
+		ft_print_pointer(num % 16);
 	}
 	else
 	{
@@ -41,7 +41,7 @@ void	ft_print_ptr(uintptr_t num)
 	}
 }
 
-unsigned long long	ft_put_ptr(unsigned long long ptr)
+unsigned long long	ft_put_pointer(unsigned long long ptr)
 {
 	int	printed_len;
 
@@ -55,8 +55,8 @@ unsigned long long	ft_put_ptr(unsigned long long ptr)
 	{
 		ft_putstr("0x");
 		printed_len += 2;
-		ft_print_ptr(ptr);
-		printed_len += ptr_length(ptr);
+		ft_print_pointer(ptr);
+		printed_len += pointer_length(ptr);
 	}
 	return (printed_len);
 }
