@@ -6,11 +6,11 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:49:09 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 11:01:34 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:00:41 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_hexlen(unsigned	int num)
 {

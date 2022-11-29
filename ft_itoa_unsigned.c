@@ -6,11 +6,11 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 14:18:22 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 11:01:30 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:00:26 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 static int	plus_minus(unsigned int n)
 {

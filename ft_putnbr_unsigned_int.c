@@ -6,11 +6,11 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:15:26 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 11:01:38 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 16:00:46 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_unsigned(unsigned int num)
 {
