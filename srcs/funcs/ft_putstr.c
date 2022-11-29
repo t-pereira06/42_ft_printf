@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 15:52:28 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/29 11:01:45 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/11/29 15:50:12 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@ int	ft_putstr(char *str)
 	i = 0;
 	if (!str)
 		i += write(1, "(null)", 6);
-	while (str[i])
+	else
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i])
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
 	}
 	return (i);
 }
