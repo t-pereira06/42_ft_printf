@@ -6,7 +6,7 @@
 #    By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 14:26:29 by tsodre-p          #+#    #+#              #
-#    Updated: 2022/11/23 17:17:07 by tsodre-p         ###   ########.fr        #
+#    Updated: 2022/12/02 09:42:11 by tsodre-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,12 @@ RM = rm -f
 CFLAG = -Wall -Wextra -Werror
 AR = ar rcs
 
-FILES = $(shell find . -type f -name '*.c')
+FILES = ft_itoa.c ft_itoa_unsigned.c ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c\
+		ft_putnbr_unsigned_int.c ft_put_pointer.c ft_putstr.c
 
 OBJ = $(FILES:%.c=%.o)
-FILES_O = $(shell find . -type f -name '*.o')
+FILES_O = ft_itoa.o ft_itoa_unsigned.o ft_printf.o ft_putchar.o ft_puthex.o ft_putnbr.o\
+		ft_putnbr_unsigned_int.o ft_put_pointer.o ft_putstr.o
 
 all: $(NAME)
 
