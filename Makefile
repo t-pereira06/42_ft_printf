@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 CC = cc
 RM = rm -f
-CFLAG = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 
 FILES = ft_itoa.c ft_itoa_unsigned.c ft_printf.c ft_putchar.c ft_puthex.c ft_putnbr.c\

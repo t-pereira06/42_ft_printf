@@ -6,7 +6,7 @@
 /*   By: tsodre-p <tsodre-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 09:20:12 by tsodre-p          #+#    #+#             */
-/*   Updated: 2022/11/24 14:43:31 by tsodre-p         ###   ########.fr       */
+/*   Updated: 2022/12/02 10:55:22 by tsodre-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int		main(void)
 	unsigned int	b;
 	unsigned int	hex;
 
-	a = 'a';
-	str = "string dos deuses";
+	a = 't';
+	str = "hello my dear friends! how are ya?";
 	str2 = 0;
-	i = -42174612;
-	b = -42174612;
-	hex = -16;
+	i = 1726351;
+	b = 7846786;
+	hex = 521512;
 	percent = '%';
 
 	// %c
