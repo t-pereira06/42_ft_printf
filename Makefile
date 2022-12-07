@@ -28,10 +28,12 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 		@$(AR) $(NAME) $(FILES_O)
+		@echo "[Success] Compilation done."
 clean:
 		@$(RM) $(FILES_O)
 
 fclean: clean
 		@$(RM) $(NAME)
+		@echo "[Deleting] Object files deleted."
 
 re: fclean all

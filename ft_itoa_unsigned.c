@@ -14,8 +14,6 @@
 
 static int	plus_minus(unsigned int n)
 {
-	if (n < 0)
-		return (-n);
 	return (n);
 }
 
@@ -44,9 +42,7 @@ char	*ft_itoa_unsigned(unsigned int n)
 	if (result == NULL)
 		return (NULL);
 	result[len] = '\0';
-	if (n < 0)
-		result[0] = '-';
-	else if (n == 0)
+	if (n == 0)
 		result[0] = '0';
 	while (n != 0)
 	{
